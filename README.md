@@ -1,13 +1,10 @@
 # EEA Elasticsearch Cluster dockerfiles
 
-## Contents
-
-Dockerfiles to build EEA Elasticsearch cluster images for testing,
-development and deployment. 
+Dockerfiles and scripts to build and deploy EEA Elasticsearch cluster. 
 
 It includes several useful elasticsearch plugins such as the [EEA RDF River plugin](https://github.com/eea/eea.elasticsearch.river.rdf) used to index data from RDF dumps and/or SPARQL enpoints.
 
-*It makes it easier to develop, ship and run the EEA Elasticsearch cluster leaving the host always clean.*
+__It makes it easier to develop, ship and run the EEA Elasticsearch cluster leaving the host always clean__
 
 ## Requirements
 All you need is [Docker installed](https://docs.docker.com/) on the host.
@@ -23,7 +20,7 @@ $ git clone https://github.com/eeacms/eea.elasticsearch-cluster.git
 
 <pre>
 $ sudo ./deploy/deploy_elasticsearch.sh
-usage: deploy/deploy_elasticsearch.sh -i <image> [-w <#workers>] [-v <data_directory>]
+usage: deploy/deploy_elasticsearch.sh -i &lt;image&gt; [-w &lt;#workers&gt;] [-v &lt;data_directory&gt;]
 
   image:    elasticsearch image from:
                  eeacms/elasticsearch:0.90.13
@@ -69,7 +66,7 @@ $ sudo deploy/kill_all.sh nameserver
 ## After Elasticsearch cluster is killed, cleanup
 <pre>
 $ sudo docker rm `sudo docker ps -a -q`
-$ sudo docker images | grep "<none>" | awk '{print $3}' | xargs sudo docker rmi
+$ sudo docker images | grep "&lt;none&gt;" | awk '{print $3}' | xargs sudo docker rmi
 </pre>
 
 ## Build local images (optional)
@@ -130,7 +127,7 @@ After a while building and debugging images the local image repository gets
 full of intermediate images that serve no real purpose other than
 debugging a broken build. To remove these do
 
-	$ sudo docker images | grep "<none>" | awk '{print $3}' | xargs sudo docker rmi
+	$ sudo docker images | grep "&lt;none&gt;" | awk '{print $3}' | xargs sudo docker rmi
 
 Also data from stopped containers tend to accumulate. In order to remove all container data (__only do when no containers are running__) do
 
