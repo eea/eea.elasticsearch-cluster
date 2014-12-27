@@ -9,6 +9,7 @@ CURDIR=$(pwd)
 BASEDIR=$(cd $(dirname $0); pwd)"/.."
 dir_list=( "elasticsearch-0.90.13" )
 
+#export IMAGE_PREFIX=""
 export IMAGE_PREFIX="eeacms/"
 
 # NOTE: the order matters but this is the right one

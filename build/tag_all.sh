@@ -5,9 +5,9 @@ if [[ "$USER" != "root" ]]; then
     exit 1
 fi
 
-image_list=("spark-master:0.9.0" "spark-worker:0.9.0" "spark-shell:0.9.0" "shark-master:0.8.0" "shark-worker:0.8.0" "shark-shell:0.8.0" )
+image_list=("elasticsearch-master:0.90.13" "elasticsearch-worker:0.90.13")
 
-IMAGE_PREFIX="amplab/"
+IMAGE_PREFIX="eeacms/"
 
 # NOTE: the order matters but this is the right one
 for i in ${image_list[@]}; do
