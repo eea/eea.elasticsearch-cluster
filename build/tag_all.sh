@@ -5,7 +5,7 @@ if [[ "$USER" != "root" ]]; then
     exit 1
 fi
 
-image_list=("elasticsearch-master:0.90.13" "elasticsearch-worker:0.90.13")
+image_list=("elasticsearch-base:0.90.13" "elasticsearch-master:0.90.13" "elasticsearch-worker:0.90.13")
 
 IMAGE_PREFIX="eeacms/"
 
