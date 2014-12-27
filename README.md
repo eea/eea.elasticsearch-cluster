@@ -66,7 +66,7 @@ $ sudo deploy/kill_all.sh nameserver
 ## After Elasticsearch cluster is killed, cleanup
 <pre>
 $ sudo docker rm `sudo docker ps -a -q`
-$ sudo docker images | grep "<none>" | awk '{print $3}' | xargs sudo docker rmi
+$ sudo docker images | grep "&lt;none&gt;" | awk '{print $3}' | xargs sudo docker rmi
 </pre>
 
 ## Build local images (optional)
