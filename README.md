@@ -1,10 +1,10 @@
 # EEA Elasticsearch Cluster dockerfiles
 
-Dockerfiles and scripts to build and deploy EEA Elasticsearch cluster. 
+This repository containes Dockerfiles and scripts to build and deploy the EEA Elasticsearch cluster as Docker containers. 
 
-It includes several useful elasticsearch plugins such as the [EEA RDF River plugin](https://github.com/eea/eea.elasticsearch.river.rdf) used to index data from RDF dumps and/or SPARQL enpoints.
+It includes several useful elasticsearch plugins such as the [EEA RDF River plugin](https://github.com/eea/eea.elasticsearch.river.rdf) used to index data from RDF dumps and/or SPARQL endpoints.
 
-__It makes it easier to develop, ship and run the EEA Elasticsearch cluster leaving the host always clean__
+__It makes it easier to develop, ship and run the EEA Elasticsearch cluster anywhere, leaving the host clean.__
 
 ## Requirements
 All you need is [Docker installed](https://docs.docker.com/) on the host.
@@ -15,7 +15,7 @@ Tested on Ubuntu 14.04/14.10 and docker version 1.2.0. It should run on any OS c
 
 __Download the scripts__
 <pre>
-$ git clone https://github.com/eeacms/eea.elasticsearch-cluster.git
+$ git clone https://github.com/eea/eea.elasticsearch-cluster.git
 </pre>
 
 <pre>
@@ -66,7 +66,7 @@ $ sudo deploy/kill_all.sh nameserver
 ## After Elasticsearch cluster is killed, cleanup
 <pre>
 $ sudo docker rm `sudo docker ps -a -q`
-$ sudo docker images | grep "&lt;none&gt;" | awk '{print $3}' | xargs sudo docker rmi
+$ sudo docker images | grep "<none>" | awk '{print $3}' | xargs sudo docker rmi
 </pre>
 
 ## Build local images (optional)
