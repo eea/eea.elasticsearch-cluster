@@ -1,7 +1,7 @@
 #
-# ElasticSearch Dockerfile
+# EEA ElasticSearch Cluster Master Dockerfile
 #
-# https://github.com/dockerfile/elasticsearch
+# https://github.com/eea/eea.elasticsearch-cluster
 #
  
 # Pull base image.
