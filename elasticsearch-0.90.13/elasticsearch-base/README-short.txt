@@ -1,0 +1,1 @@
+EEA ElasticSearch Cluster Base is the base image used for building ElasticSearch master and datanodes containers. The base image includes the most useful and common components and plugins such as EEA RDF River used for indexing RDF data from files or SPARQL endpoints such as Openlink Virtuoso.
