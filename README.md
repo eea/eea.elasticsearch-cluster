@@ -1,15 +1,21 @@
 # EEA Elasticsearch Cluster dockerfiles
 
-This repository containes Dockerfiles and scripts to build and deploy the EEA Elasticsearch cluster as Docker containers. 
+This repository containes Dockerfiles and scripts to build and deploy the 
+EEA Elasticsearch cluster as Docker containers. 
 
-It includes several useful elasticsearch plugins such as the [EEA RDF River plugin](https://github.com/eea/eea.elasticsearch.river.rdf) used to index data from RDF dumps and/or SPARQL endpoints.
+It includes several useful elasticsearch plugins such as the 
+[EEA RDF River plugin](https://github.com/eea/eea.elasticsearch.river.rdf) used to index 
+data from RDF dumps and/or SPARQL endpoints.
 
-__It makes it easier to develop, ship and run the EEA Elasticsearch cluster anywhere, leaving the host clean.__
+__It makes it easier to develop, ship and run the EEA Elasticsearch cluster 
+anywhere, leaving the host clean.__
 
 ## Requirements
-All you need is [Docker installed](https://docs.docker.com/) on the host.
+All you need is [Docker installed](https://docs.docker.com/) on the host 
+(being devel, staging or production).
 
-Tested on Ubuntu 14.04/14.10 and docker version 1.2.0. It should run on any OS capable of running Docker. For running Docker on Mac and Windows see [the docker docs](http://docs.docker.io).
+Tested on Ubuntu 14.04/14.10 and docker version 1.2.0. The cluster runs on any OS 
+capable of running Docker. For running Docker on Mac and Windows see [the docker docs](https://docs.docker.com).
 
 ## Deploy the Elasticsearch cluster
 
@@ -19,6 +25,7 @@ $ git clone https://github.com/eea/eea.elasticsearch-cluster.git
 </pre>
 
 <pre>
+$ cd eea.elasticsearch-cluster
 $ sudo ./deploy/deploy_elasticsearch.sh
 usage: deploy/deploy_elasticsearch.sh -i &lt;image&gt; [-w &lt;#workers&gt;] [-v &lt;data_directory&gt;]
 
@@ -104,15 +111,12 @@ is not enforced in any way by Docker.
 The images and startup scripts follow the following structure in order to reuse
 as much as possible of the image they depend on. There are two types of images,
 <em>base</em> images and <em>leaf</em> images. Leaf images, as the name suggests,
-are images that are leafs in the dependency tree. For example, elasticsearch-master depends on elasticsearch-base as
-its base image and is itself a leaf.
+are images that are leafs in the dependency tree. For example, elasticsearch-master 
+depends on elasticsearch-base as its base image and is itself a leaf.
 
-In addition to its Dockerfile, each image has a
-	files/
-subdirectory in its image directory that contains files (config files, data files) that will be copied
-to the
-	root/<em>image_name</em>_files
-directory inside the image.
+In addition to its Dockerfile, each image has a files/
+subdirectory in its image directory that contains files (config files, data files) 
+that will be copied to the root/<em>image_name</em>_files directory inside the image.
 
 ## Tips
 
@@ -129,12 +133,12 @@ debugging a broken build. To remove these do
 
 	$ sudo docker images | grep "&lt;none&gt;" | awk '{print $3}' | xargs sudo docker rmi
 
-Also data from stopped containers tend to accumulate. In order to remove all container data (__only do when no containers are running__) do
+Also data from stopped containers tend to accumulate. In order to remove all container 
+data (__only do when no containers are running__) do
 
 	$ sudo docker rm `sudo docker ps -a -q`
 
-
-### Credits
+## Credits
 This repository was based on a fork from amplab / docker-scripts.
 DNS and cluster setup are all credited to the great work of the amplab team.
 

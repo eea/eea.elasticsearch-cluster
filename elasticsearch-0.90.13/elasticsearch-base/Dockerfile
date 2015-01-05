@@ -5,7 +5,8 @@
 #
  
 # Pull base image.
-FROM dockerfile/java
+FROM dockerfile/java:oracle-java7
+MAINTAINER Antonio De Marinis <demarinis@eea.europa.eu>
 
 # Environment variables
 ENV ES_HOME /elasticsearch
