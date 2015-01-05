@@ -2,7 +2,8 @@
 
 __NOTE: [Docker Automated Builds](http://docs.docker.com/docker-hub/builds/) are already configured 
 and available at [eeacms docker repository](https://registry.hub.docker.com/repos/eeacms/), 
-therefore no need to use the procedure below unless really necessary for testing and development.__
+therefore no need to use the procedure below unless really necessary for testing and development 
+or [when building order is important](https://groups.google.com/forum/#!topic/docker-user/bkZXVezrWGs).__
 
 This folder contains scripts to build and push images manually 
 to [Docker Hub Registry](https://registry.hub.docker.com/) in the 
