@@ -5,7 +5,7 @@
 #
  
 # Pull base image.
-FROM elasticsearch-base:0.90.13
+FROM eeacms/elasticsearch-base:0.90.13
 MAINTAINER Antonio De Marinis <demarinis@eea.europa.eu>
 
 ADD files /root/elasticsearch_master_files
