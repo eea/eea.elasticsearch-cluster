@@ -11,7 +11,7 @@ MAINTAINER Antonio De Marinis <demarinis@eea.europa.eu>
 # Environment variables
 ENV ES_HOME /elasticsearch
 ENV ES_VERSION 0.90.13
-ENV RDF_RIVER_VERSION 1.4.2
+ENV RDF_RIVER_VERSION 1.4.3
 # Create elasticsearch user
 ENV ES_USER elasticsearch
 ENV ES_GROUP elasticsearch
