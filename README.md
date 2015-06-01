@@ -1,3 +1,8 @@
+DEPRECATED
+==========
+
+**Notice:** This repository has been replaced by a better and dockerised version https://github.com/eea/eea.docker.elastic
+
 # EEA Elasticsearch Cluster dockerfiles
 
 This repository containes Dockerfiles and scripts to build and deploy the 
